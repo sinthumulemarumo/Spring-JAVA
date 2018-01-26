@@ -1,0 +1,50 @@
+<div class="row" >
+       <div class="topDrop_register" style="height: 120px">
+       
+            <a href="#!/home"  class="btn btn-info btn-lg" style="margin-top: 50px;margin-left: 70px">
+                 
+                           <span class="glyphicon glyphicon-home"></span> Home</a>
+    </div>
+        
+</div>
+
+<div class="container" style="align-content: center;margin-top: 100px" >
+     
+        <div align="center" style="color: gray; font-weight: bold; font-size: 30px" >
+            Welcome to Pick n Pay Online
+        </div><br/>
+       
+
+<div class="form-group">
+                        <div class="col-lg-10 ">
+                           <a href="#!/register" class="button btn btn-primary" style="margin-left: 370px;width: 150px; margin-top:-20px"> Sign Up </a>
+                            <a href="#!/products" class="button btn btn-info" style="margin-left: 540px; width: 170px; margin-top:-70px"> Login as Guest </a>
+                        </div>
+</div><br/>
+        
+        <form class="form-inline" name="loginForm" ng-controller="loginController" style="margin-left: 350px" >
+            <div class="form-group input-group">
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-user"></span>
+                        </span>
+                        <input type="text" class="form-control" id="inputUsername" ng-model="username" placeholder="Username" style="width: 340px" required=""/>
+                    </div>
+                <br/>
+                <div class="form-group input-group">
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-lock"></span>
+                        </span>
+                            <input type="password" class="form-control" id="inputPassword" ng-model="password" placeholder="************" style="width: 340px"   required=""/>
+                        </div>
+                    <br/><br/>
+                <div class="container" style="margin-left: 49px">
+                    
+                    <div class="form-group">
+                        <div class="col-lg-10 ">
+                            <button type="submit"  ng-click="login()" class="btn btn-danger" value="#!/register" style="font-size: 12px;width: 150px">LOGIN</button>
+                        </div>
+                    </div>
+                </div>
+        </form>
+</div>
+

@@ -1,0 +1,129 @@
+<div class="row" >
+    <div class="topDrop_register" style="height: 120px">
+<a href="#!/home"  class="btn btn-info btn-lg" style="margin-top: 50px;margin-left: 70px">
+                 
+                           <span class="glyphicon glyphicon-home"></span> Home</a>
+              
+        <button onclick="document.getElementById('id01').style.display='block'" class="btn btn-primary" style="font-size: 12px;width: 150px;margin-left: 600px;font-weight: bold">My Basket : {{cart.length}}</button>
+    </div>
+</div>
+
+<div class="container">
+    <div class="product-block" ng-repeat="prod in products" style="width:250px; height: 340px;font-weight: bold;color: #004579">
+        <div class="card text-xs-center">  <img ng-src="{{prod.image}}" style="width:120px; height: 150px;"/>
+            <h5 class="card-title" > {{prod.name}}</h5>
+            <p class="card-text price" style="font-weight: bold">{{prod.price | currency : "R"}}</p>
+            <button type="submit" class="btn btn-primary" ng-click="addToCart(prod)()"  value="#!/register" style="font-size: 12px;width: 150px;">Add To Cart</button>
+        </div>
+    </div>
+</div>
+
+<div class="w3-container">
+    <div id="id01" class="w3-modal " >
+    <div class="w3-modal-content w3-animate-top w3-card-4" >
+        <header class="w3-container w3-teal" style="height:  90px;width: 0px"> 
+        <span onclick="document.getElementById('id01').style.display='none'" 
+        class="w3-button w3-large w3-display-topright">Continue Shopping</span>
+         <img src="slideImages/header3.png" alt=""/>
+       
+      </header><br/>
+       <div class="w3-container">
+            <ul class="list-group">
+            <li class="list-group-item" ng-repeat="prodInCart in cart" >
+              <h4 style="font-weight: bold;color: #004579">{{prodInCart.name}} |{{prodInCart.quantity * prodInCart.price | currency : "R" }} </h4>
+               <!--<img ng-src="{{prodInCart.image}}" alt="" style="width: 60px; height: 50px;"/>-->
+               <input class="btn btn-info" type="button" ng-click="removeProdCart(prodInCart)" value="-" style="font-size: 8px;height: 28px" />
+               {{prodInCart.quantity}} 
+                <input class="btn btn-primary" type="button" ng-click="incrementQuantity(prodInCart)" value="+" style="font-size: 8px;height: 28px" />
+            </li>
+          </ul>
+           <div ng-show="total !== 0.00">
+               <h4 style="font-weight: bolder">Total : {{total| currency : "R"}}</h4>
+        </div>
+        <footer class="w3-container w3-teal" style="height: 100px"><br/>
+            <button onclick="document.getElementById('id02').style.display='block'" class="btn btn-primary" style="font-size: 12px;height: 50px;width: 160px">Proceed</button>
+        </footer>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--CheckOut-->
+<div class="w3-container">
+    <div id="id02" class="w3-modal " >
+    <div class="w3-modal-content w3-animate-right" >
+        <header class="w3-container w3-teal" style="height:  90px;width: 0px"> 
+        <span onclick="document.getElementById('id02').style.display='none'" 
+        class="w3-button w3-large w3-display-topright">Review Your Products List</span>
+         <img src="slideImages/header3.png" alt=""/>
+          <h1> SHIPPING DETAILS PLEASE</h1>
+        </header><br/>
+       <div class="w3-container">
+           <div class="wrapper" style="margin-left: 30px;width: 340px">
+            <select  ng-model="bank.bankType">
+                <option value="" selected="">----SELECT BANK----</option>
+                <option value="capitec">Capitec Bank</option>
+                <option value="standard">Standard Bank</option>
+                <option value="nedbank">Nedbank</option>
+                <option value="fnb">Fnb</option>
+                <option value="absa">Absa</option>
+            </select>
+        </div>
+        <label style="font-size: 12px;margin-left: 30px">Account Number: </label>
+            <div class="form-group">
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" id="bankName" ng-model="bank.accNo" placeholder="09876545645" style="width: 340px"   required=""/>
+                    </div>
+            </div><br/>
+        <label style="font-size: 12px;margin-left: 30px"> Account Pin : </label>
+            <div class="form-group">
+                    <div class="col-lg-10">
+                        <input type="password" class="form-control" id="inputPassword" ng-model="bank.pin" placeholder="09876545645" style="width: 340px"   required=""/>
+                    </div>
+            </div><br/>
+      </div>
+        <footer class="w3-container w3-teal" style="height: 100px"><br/>
+            <button onclick="document.getElementById('id03').style.display='block'" class="btn btn-primary" ng-click="makePayment()"  style="font-size: 12px;height: 50px;width:150px">Pay and Continue</button>
+          
+       </footer>
+       
+    </div>
+  </div>
+</div>
+
+<div class="w3-container">
+    <div id="id03" class="w3-modal " >
+    <div class="w3-modal-content w3-animate-left" >
+        <header class="w3-container" style="height:  90px;width: 0px"> 
+        <span onclick="document.getElementById('id03').style.display='none'" 
+        class="w3-button w3-large w3-display-topright">Continue Shopping</span>
+         <img src="slideImages/header3.png" alt=""/>
+        
+      </header><br/>
+       <div class="w3-container">
+           <h1>
+               Hi {{customer.firstname}} You are about to Finish Your Order Process
+           </h1>
+          
+      </div>
+      <footer class="w3-container w3-teal" style="height: 100px"><br/>
+          <button type="submit" class="btn btn-danger" ng-click="placeOrder()" >CHECK OUT</button>
+       </footer>
+    </div>
+        
+  </div>
+</div>
+
+            
+
+
+
+
+ 
+
+    
+
+

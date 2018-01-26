@@ -1,0 +1,36 @@
+
+<div class="row" >
+    <div class="topDrop_register" style="height: 120px">
+<a href="#!/admin"  class="btn btn-info btn-lg" style="margin-top: 50px;margin-left: 70px">
+                 
+                           <span class="glyphicon glyphicon-home"></span> Home Admin</a>
+                           
+    </div>
+</div>
+
+<div class="container">
+    
+  <h2>Products Available</h2>
+                                                                                      
+  <div class="table-responsive">          
+      <table class="table" style="border: 4px">
+    <thead>
+      <tr>
+          <th>Id</th>
+        <th>name</th>
+        <th>description</th>
+        <th>price</th>
+       
+      </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="prod in products">
+        <td>{{ prod.product_id }}</td>
+        <td>{{ prod.name }}</td>
+        <td>{{ prod.description }}</td>
+        <td>{{ prod.price | currency : R }}</td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
+</div>

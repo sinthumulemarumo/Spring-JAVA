@@ -1,0 +1,38 @@
+<div class="row" >
+    <div class="topDrop_register" style="height: 120px">
+       
+         <a href="#!/admin"  class="btn btn-info btn-lg" style="margin-top: 50px;margin-left: 70px">
+                 
+          <span class="glyphicon glyphicon-home"></span> Home Admin</a>
+      
+    </div>
+        
+</div>
+
+
+<div class="container" style="width: auto;padding-top: 90px">
+    <form name="productForm" ng-controller="productController" ng-submit="saveProd()">
+        <div class="form-group row">
+            <div class="container-fluid" style="padding-left: 460px">
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="prod_name" ng-model="name" placeholder="name" style="width: 350px" required=""/>
+            </div>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="password" ng-model="description" placeholder="description" style="width: 350px" required=""/>
+            </div>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="password" ng-model="price" placeholder="price e.g R1.99" style="width: 350px" required=""/>
+            </div>
+            <div class="col-md-4">
+
+                <label for="filePicker">Upload Photo of the product</label>
+                <input type="file" id="filePickerImage" ng-model="filePickerImage" accept="image/png"  />
+            </div>
+            <div class="col-lg-10">
+                <button class="btn btn-success" id="submit" type="submit" style="width: 350px" >Add Product</button>
+            </div>
+        </div>
+        </div>
+    </form>
+</div>
+

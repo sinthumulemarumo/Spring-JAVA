@@ -1,0 +1,80 @@
+<div class="row" >
+    <div class="topDrop_register" style="height: 120px">
+       
+                <a href="#!/home"  class="btn btn-info btn-lg" style="margin-top: 50px;margin-left: 70px">
+                 
+                <span class="glyphicon glyphicon-home"></span> Home</a>
+         
+    </div>
+        
+</div>
+<div class="container" >
+<div class="row" style="padding-left: 350px;padding-top: 40px">
+    <div style="font-size: 25px; font-weight: bold; color:#245580"> Register for Pick n Pay online </div>
+       
+    </div>
+
+ <form name="registerForm" class="form-horizontal"  ng-submit="register()" style="align-content: center;padding-left: 0px" >
+            
+               
+   <div class="form-group">
+  <label class="col-md-4 control-label">First Name</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                       
+                        <input type="text" class="form-control" id="name" ng-model="customer.firstname" placeholder="firstname" style="width: 300px;height: 30px" required="" autofocus=""/>
+                    </div>
+                </div>
+   </div>
+                
+  <div class="form-group">
+  <label class="col-md-4 control-label">Last Name</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input type="text" class="form-control" id="surname" ng-model="customer.lastname" placeholder="lastname" style="width: 300px;height: 30px" required=""/>
+                    </div>
+                </div>
+   </div>
+             
+  <div class="form-group">
+                   <label class="col-md-4 control-label">Email</label>  
+              <div class="col-md-4 inputGroupContainer">
+              <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input type="email" class="form-control" id="email" ng-model="customer.email" placeholder="name@example.com" style="width: 300px;height: 30px" required=""/>
+          </div>
+      </div>
+   </div>
+              
+ <div class="form-group">
+                 <label class="col-md-4 control-label">Username Name</label>  
+          <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input type="text" class="form-control" id="username" ng-model="customer.username" placeholder="username" style="width: 300px;height: 30px" required=""/>
+  </div>
+  </div>
+  </div>
+              
+  <div class="form-group">
+  <label class="col-md-4 control-label">Password</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input type="password" class="form-control" id="password" ng-model="customer.password" placeholder="password" style="width: 300px;height: 30px" required=""/>
+    </div>
+  </div>
+</div>
+                  
+ <div class="form-group" style="margin-left: 50px">
+        <div class="col-lg-10">
+                    <button class="btn btn-primary" id="submit" type="submit" style="width: 350px;height: 30px;font-size: 15px; margin-left: 350px" >Register</button>
+                    <br/><a href="#!/login" style="color:#004579;font-size: 12px;margin-left: 500px" data-toggle="tooltip" title="Log in">Already  have an account? click here</a>
+         </div>
+  </div>
+           
+        </form>
+
+ </div>
